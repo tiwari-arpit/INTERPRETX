@@ -13,7 +13,7 @@ The platform is designed for **high-stakes environments** such as finance, healt
 INTERPRETX augments predictive models with a **Decision Intelligence Layer** that provides:
 
 * Prediction and confidence analysis
-* Counterfactual reasoning (what-if scenarios)
+* Counterfactual reasoning
 * Stability and robustness diagnostics
 * Uncertainty quantification
 * Prototype / similarity-based explanations
@@ -181,7 +181,7 @@ advanced_edis_project/
 ## Technology Stack
 
 * Programming Language: Python
-* UI Layer: Streamlit
+* UI Layer: GradioUI
 * ML Frameworks: Scikit-learn, XGBoost, PyTorch
 
 Decision Intelligence Components:
