@@ -18,6 +18,14 @@ from dataclasses import dataclass, field, asdict
 import joblib
 import numpy as np
 
+# Import settings for storage configuration
+try:
+    from configs.settings import MODELS_PATH, get_log_file
+except ImportError:
+    # Fallback if settings cannot be imported
+    MODELS_PATH = Path("./models_registry")
+    def get_log_file(component):
+        return f"./{component}.log"
 
 logger = logging.getLogger(__name__)
 
@@ -67,13 +75,17 @@ class ModelMetadata:
 class ModelRegistry:
     """Central registry for managing ML models."""
     
-    def __init__(self, registry_path: str = "./models_registry"):
+    def __init__(self, registry_path: Optional[str] = None):
         """
         Initialize the model registry.
         
         Args:
-            registry_path: Path where model metadata and models are stored
+            registry_path: Path where model metadata and models are stored.
+                          If None, uses MODELS_PATH from settings.
         """
+        if registry_path is None:
+            registry_path = str(MODELS_PATH / "registry")
+        
         self.registry_path = Path(registry_path)
         self.registry_path.mkdir(parents=True, exist_ok=True)
         
