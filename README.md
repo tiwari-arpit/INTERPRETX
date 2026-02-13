@@ -310,6 +310,7 @@ Which determines safe automation behavior.
 
 Designed for easy migration to:
 
+<<<<<<< HEAD
 ✔ FastAPI / Flask backend
 ✔ React / Angular frontend
 ✔ API Gateway / Microservices
@@ -323,3 +324,10 @@ Designed for easy migration to:
 For hackathon efficiency, INTERPRETX runs as a **unified Streamlit + Python system**, while maintaining modular architecture for future scaling.
 
 ---
+=======
+* FastAPI or Flask backends
+* React or Angular frontends
+* API gateways and microservices
+* PostgreSQL and MongoDB storage
+* Continuous drift and monitoring services
+>>>>>>> 2a54f3412f88d9f676301a87f28eae060ba70e6f
