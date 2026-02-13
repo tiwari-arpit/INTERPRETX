@@ -17,6 +17,12 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 
+# Import storage manager for logging predictions
+try:
+    from core.storage_manager import StorageManager
+except ImportError:
+    StorageManager = None
+
 
 logger = logging.getLogger(__name__)
 
@@ -99,6 +105,7 @@ class PredictionEngine:
         model_registry: Any,
         ensemble_manager: Optional[Any] = None,
         enable_uncertainty: bool = True,
+        storage_manager: Optional[Any] = None,
     ):
         """
         Initialize prediction engine.
@@ -107,10 +114,21 @@ class PredictionEngine:
             model_registry: Reference to ModelRegistry
             ensemble_manager: Optional reference to EnsembleManager
             enable_uncertainty: Whether to compute uncertainty estimates
+            storage_manager: Optional StorageManager for logging predictions
         """
         self.model_registry = model_registry
         self.ensemble_manager = ensemble_manager
         self.enable_uncertainty = enable_uncertainty
+        
+        # Initialize storage manager if provided
+        if storage_manager is None and StorageManager:
+            try:
+                self.storage_manager = StorageManager()
+            except Exception as e:
+                logger.warning(f"Could not initialize StorageManager: {e}")
+                self.storage_manager = None
+        else:
+            self.storage_manager = storage_manager
         
         # Prediction history tracking
         self.prediction_history: List[PredictionResult] = []
@@ -448,6 +466,13 @@ class PredictionEngine:
     def _add_to_history(self, result: PredictionResult) -> None:
         """Add prediction to history, removing old entries if needed."""
         self.prediction_history.append(result)
+        
+        # Log to storage if available
+        if self.storage_manager:
+            try:
+                self.storage_manager.log_prediction(result)
+            except Exception as e:
+                logger.warning(f"Could not log prediction to storage: {e}")
         
         if len(self.prediction_history) > self.max_history_size:
             self.prediction_history = self.prediction_history[-self.max_history_size:]
