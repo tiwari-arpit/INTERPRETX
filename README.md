@@ -8,21 +8,21 @@ The platform is designed for **high-stakes environments** such as finance, healt
 
 ---
 
-## 🚀 **Core Capabilities**
+##  **Core Capabilities**
 
 INTERPRETX augments predictive models with a **Decision Intelligence Layer** that provides:
 
-✔ Prediction & confidence analysis
-✔ Counterfactual reasoning (what-if scenarios)
-✔ Stability & robustness diagnostics
-✔ Uncertainty quantification
-✔ Prototype / similarity-based explanations
-✔ Fairness & bias risk indicators
-✔ Governance & risk-aware decision policies
+ Prediction & confidence analysis
+ Counterfactual reasoning (what-if scenarios)
+ Stability & robustness diagnostics
+ Uncertainty quantification
+ Prototype / similarity-based explanations
+ Fairness & bias risk indicators
+ Governance & risk-aware decision policies
 
 ---
 
-## 🧠 **Explainability Philosophy**
+## **Explainability Philosophy**
 
 Traditional XAI asks:
 
@@ -36,13 +36,13 @@ This decision-centric approach better supports **real-world AI governance & depl
 
 ---
 
-# 🏗️ **System Overview**
+#  **System Overview**
 
 INTERPRETX operates as an **intelligence layer on top of ML models**, transforming predictions into **auditable, risk-aware decisions**.
 
 ---
 
-## 🔁 **Refined Project Flow (Execution-Level Logic) ⭐⭐⭐**
+## **Refined Project Flow (Execution-Level Logic) **
 
 The system follows a **human-supervised decision intelligence workflow**:
 
@@ -69,16 +69,16 @@ The system follows a **human-supervised decision intelligence workflow**:
 │ 1. Prediction Engine                         │
 │    → Run model inference                     │
 │                                              │
-│ 2. Counterfactual Engine ⭐                   │
+│ 2. Counterfactual Engine                     │
 │    → What minimal changes flip decision?     │
 │                                              │
-│ 3. Stability & Robustness Engine ⭐           │
+│ 3. Stability & Robustness Engine             │
 │    → Sensitivity to input variations         │
 │                                              │
-│ 4. Uncertainty Quantification Engine ⭐       │
+│ 4. Uncertainty Quantification Engine         │
 │    → Confidence & reliability assessment     │
 │                                              │
-│ 5. Prototype / Similarity Engine ⭐           │
+│ 5. Prototype / Similarity Engine             │
 │    → Comparable past instances               │
 │                                              │
 │ 6. Fairness & Bias Engine (optional)         │
@@ -87,7 +87,7 @@ The system follows a **human-supervised decision intelligence workflow**:
 │ 7. Causal Reasoning Engine (optional)        │
 │    → Intervention-style reasoning            │
 │                                              │
-│ 8. Governance & Risk Scoring Engine ⭐⭐⭐      │
+│ 8. Governance & Risk Scoring Engine          │
 │    → Trust / Warn / Escalate decisions       │
 │                                              │
 └──────────────┬───────────────────────────────┘
@@ -110,7 +110,7 @@ The system follows a **human-supervised decision intelligence workflow**:
 
 ---
 
-## ✅ **Operational Modes**
+## **Operational Modes**
 
 ---
 
@@ -143,11 +143,11 @@ Prediction
 
 ---
 
-# 📊 **Types of Explanations Generated**
+# **Types of Explanations Generated**
 
 ---
 
-### 🔹 **Counterfactual Explanation**
+### **Counterfactual Explanation**
 
 Actionable reasoning:
 
@@ -159,25 +159,25 @@ Example:
 
 ---
 
-### 🔹 **Stability / Robustness Signal**
+### **Stability / Robustness Signal**
 
 Decision reliability:
 
-✔ Stable → Robust prediction
-✔ Unstable → Borderline / sensitive decision
+ Stable → Robust prediction
+ Unstable → Borderline / sensitive decision
 
 ---
 
-### 🔹 **Uncertainty / Confidence Signal**
+###  **Uncertainty / Confidence Signal**
 
 Model certainty:
 
-✔ High confidence → Reliable prediction
-✔ Low confidence → Requires caution
+ High confidence → Reliable prediction
+ Low confidence → Requires caution
 
 ---
 
-### 🔹 **Prototype / Similarity Explanation**
+###   **Prototype / Similarity Explanation**
 
 Human-intuitive reasoning:
 
@@ -185,24 +185,24 @@ Human-intuitive reasoning:
 
 ---
 
-### 🔹 **Governance Decision**
+###   **Governance Decision**
 
 Risk-aware automation policy:
 
-✔ Auto-Accept
-✔ Warn / Review
-✔ Escalate to Human
+ Auto-Accept
+ Warn / Review
+ Escalate to Human
 
 ---
 
-# 🧩 **Project Structure**
+#   **Project Structure**
 
 Hackathon-optimized modular architecture:
 
 ```
 advanced_edis_project/
 │
-├── app.py                          # Streamlit Dashboard (Entry Point)
+├── app.py                          # Gradio Dashboard (Entry Point)
 │
 ├── core/                           # Prediction & Model Logic
 │   ├── prediction_engine.py
@@ -217,7 +217,7 @@ advanced_edis_project/
 │   ├── fairness_engine.py
 │   └── causal_engine.py
 │
-├── governance/                     # Governance & Risk Policies ⭐
+├── governance/                     # Governance & Risk Policies 
 │   ├── risk_scoring.py
 │   ├── decision_policy.py
 │   └── escalation_manager.py
@@ -241,20 +241,20 @@ advanced_edis_project/
 
 ---
 
-# 🖥️ **User Interface**
+# **User Interface**
 
 The dashboard enables:
 
-✔ Model selection
-✔ Input / dataset upload
-✔ Prediction visualization
-✔ Advanced interpretation panel
-✔ Stability & confidence indicators
-✔ Governance signals
+ Model selection
+ Input / dataset upload
+ Prediction visualization
+ Advanced interpretation panel
+ Stability & confidence indicators
+ Governance signals
 
 ---
 
-# ⚙️ **Technology Stack**
+#  **Technology Stack**
 
 **Language:** Python
 **UI Layer:** Streamlit
@@ -267,59 +267,3 @@ The dashboard enables:
 * Uncertainty → Confidence / entropy metrics
 * Similarity → Nearest neighbor reasoning
 * Fairness → Bias & disparity metrics
-
----
-
-# 🎯 **Target Use Cases**
-
-INTERPRETX is designed for **high-risk AI decisions**:
-
-* Credit approval & risk scoring
-* Medical decision support
-* Hiring & screening systems
-* Fraud detection
-* Policy & compliance tools
-
----
-
-# ✅ **Why INTERPRETX is Different**
-
-Unlike traditional XAI dashboards:
-
-✔ Focuses on **decision reliability & governance**
-✔ Provides **actionable explanations**
-✔ Evaluates **risk & trustworthiness**
-✔ Enables **human-supervised AI deployment**
-
----
-
-# 🛡️ **Governance & Safety Concept**
-
-Each decision is evaluated using:
-
-* Stability
-* Uncertainty
-* Fairness risk
-* Counterfactual sensitivity
-
-Which determines safe automation behavior.
-
----
-
-# 🚀 **Future Extensions**
-
-Designed for easy migration to:
-
-✔ FastAPI / Flask backend
-✔ React / Angular frontend
-✔ API Gateway / Microservices
-✔ PostgreSQL / MongoDB storage
-✔ Drift monitoring services
-
----
-
-# 👥 **Hackathon Note**
-
-For hackathon efficiency, INTERPRETX runs as a **unified Streamlit + Python system**, while maintaining modular architecture for future scaling.
-
----
