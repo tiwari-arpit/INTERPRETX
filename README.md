@@ -8,21 +8,21 @@ The platform is designed for **high-stakes environments** such as finance, healt
 
 
 
-## 🚀 **Core Capabilities**
+## Core Capabilities
 
 INTERPRETX augments predictive models with a **Decision Intelligence Layer** that provides:
 
-✔ Prediction & confidence analysis
-✔ Counterfactual reasoning (what-if scenarios)
-✔ Stability & robustness diagnostics
-✔ Uncertainty quantification
-✔ Prototype / similarity-based explanations
-✔ Fairness & bias risk indicators
-✔ Governance & risk-aware decision policies
+* Prediction and confidence analysis
+* Counterfactual reasoning
+* Stability and robustness diagnostics
+* Uncertainty quantification
+* Prototype / similarity-based explanations
+* Fairness and bias risk indicators
+* Governance-driven, risk-aware decision policies
 
 
 
-## 🧠 **Explainability Philosophy**
+## Explainability Philosophy
 
 Traditional Explainable AI systems focus on answering:
 
@@ -32,179 +32,116 @@ INTERPRETX reframes the problem and asks:
 
 > “How trustworthy is this decision, how easily could it change, and what would change it?”
 
-This decision-centric approach better supports **real-world AI governance & deployment**.
+This **decision-centric explainability approach** is better aligned with real-world AI governance, regulatory compliance, and human oversight requirements.
 
----
 
-# 🏗️ **System Overview**
+
+## System Overview
 
 INTERPRETX operates as an **intelligence layer on top of machine learning models**, transforming raw predictions into **auditable, risk-aware decisions**.
 
 
 
-## 🔁 **Refined Project Flow (Execution-Level Logic) ⭐⭐⭐**
+## Refined Project Flow (Execution-Level Logic)
 
 The system follows a **human-supervised decision intelligence workflow**:
 
-```
-┌──────────────────────────────┐
-│        Client / User         │
-│ (Judge / Analyst / Operator) │
-└──────────────┬───────────────┘
-               │ Interacts via Dashboard
-               ▼
-┌──────────────────────────────┐
-│   Governance Dashboard UI    │
-│        (Streamlit App)       │
-│ ─ Model Selection            │
-│ ─ Input / Dataset Upload     │
-│ ─ Predict / Interpret        │
-└──────────────┬───────────────┘
-               │ Internal System Calls
-               ▼
-┌──────────────────────────────────────────────┐
-│        Decision Intelligence Core            │
-├──────────────────────────────────────────────┤
-│                                              │
-│ 1. Prediction Engine                         │
-│    → Run model inference                     │
-│                                              │
-│ 2. Counterfactual Engine ⭐                   │
-│    → What minimal changes flip decision?     │
-│                                              │
-│ 3. Stability & Robustness Engine ⭐           │
-│    → Sensitivity to input variations         │
-│                                              │
-│ 4. Uncertainty Quantification Engine ⭐       │
-│    → Confidence & reliability assessment     │
-│                                              │
-│ 5. Prototype / Similarity Engine ⭐           │
-│    → Comparable past instances               │
-│                                              │
-│ 6. Fairness & Bias Engine (optional)         │
-│    → Bias & group disparity checks           │
-│                                              │
-│ 7. Causal Reasoning Engine (optional)        │
-│    → Intervention-style reasoning            │
-│                                              │
-│ 8. Governance & Risk Scoring Engine ⭐⭐⭐      │
-│    → Trust / Warn / Escalate decisions       │
-│                                              │
-└──────────────┬───────────────────────────────┘
-               │ Structured Decision Intelligence
-               ▼
-┌──────────────────────────────┐
-│ Monitoring & Drift Signals   │
-│ (Simplified Hackathon Mode)  │
-│ → Input deviation checks     │
-│ → Confidence degradation     │
-└──────────────┬───────────────┘
-               ▼
-┌──────────────────────────────┐
-│        Storage Layer         │
-│ ─ Model files                │
-│ ─ Decision logs              │
-│ ─ Metrics / diagnostics      │
-└──────────────────────────────┘
-```
+1. The user (analyst, operator, or reviewer) interacts with the Governance Dashboard.
+2. A model is selected and input data or datasets are uploaded.
+3. The user triggers either:
+
+   * **Prediction Mode** for fast inference, or
+   * **Interpretation Mode** for deep decision analysis.
+4. The Decision Intelligence Core evaluates the decision across multiple trust and risk dimensions.
+5. Governance policies determine whether the decision can be trusted, warned, or escalated.
+6. All decisions, metrics, and diagnostics are logged for traceability and monitoring.
 
 ---
 
-## ✅ **Operational Modes**
+## Decision Intelligence Core
 
----
+The core consists of specialized engines, each responsible for evaluating a distinct aspect of decision quality:
 
-### **Prediction Mode**
+1. **Prediction Engine**
+   Performs model inference and outputs predictions with probability scores.
 
-Triggered when user clicks **Predict**
+2. **Counterfactual Engine**
+   Identifies minimal changes to input features that would alter the decision outcome.
 
-```
-User Input → Prediction Engine → Prediction Output
-```
+3. **Stability and Robustness Engine**
+   Tests sensitivity to small input perturbations and identifies borderline or unstable decisions.
 
-Fast inference without diagnostics.
+4. **Uncertainty Quantification Engine**
+   Measures prediction confidence and reliability, detecting ambiguous or out-of-distribution inputs.
 
----
+5. **Prototype / Similarity Engine**
+   Retrieves comparable past instances to support human-intuitive reasoning.
 
-### **Interpretation Mode (Core Innovation)**
+6. **Fairness and Bias Engine (Optional)**
+   Evaluates group-level disparities across sensitive attributes.
 
-Triggered when user clicks **Interpret**
+7. **Causal Reasoning Engine (Optional)**
+   Supports intervention-style reasoning to distinguish causation from correlation.
 
-```
-Prediction
-→ Counterfactual Analysis
-→ Stability / Robustness Testing
-→ Uncertainty Estimation
-→ Prototype Retrieval
-→ (Optional Fairness / Causal Checks)
-→ Governance Scoring
-→ Structured Explanation
-```
+8. **Governance and Risk Scoring Engine**
+   Aggregates all signals to classify decisions into trust, review, or escalation categories.
 
----
 
-# 📊 **Types of Explanations Generated**
 
----
+## Operational Modes
 
-### 🔹 **Counterfactual Explanation**
+### Prediction Mode
 
-Actionable reasoning:
+* Triggered when the user selects *Predict*
+* Executes fast model inference only
+* Returns prediction output without diagnostics
 
-> “If feature X changes → Decision likely changes”
+### Interpretation Mode (Core Innovation)
 
-Example:
+* Triggered when the user selects *Interpret*
+* Performs:
 
-> “If income increases to ₹45,000 → Approval likely”
+  * Counterfactual analysis
+  * Stability and robustness testing
+  * Uncertainty estimation
+  * Prototype retrieval
+  * Optional fairness and causal checks
+  * Governance risk scoring
+* Produces a structured, decision-level explanation
 
----
 
-### 🔹 **Stability / Robustness Signal**
 
-Decision reliability:
+## Types of Explanations Generated
 
-✔ Stable → Robust prediction
-✔ Unstable → Borderline / sensitive decision
+### Counterfactual Explanation
 
----
+Actionable reasoning that shows how changing specific features could change the decision outcome.
 
-### 🔹 **Uncertainty / Confidence Signal**
+### Stability and Robustness Signal
 
-Model certainty:
+Indicates whether a decision is stable or highly sensitive to small input changes.
 
-✔ High confidence → Reliable prediction
-✔ Low confidence → Requires caution
+### Uncertainty and Confidence Signal
 
----
+Communicates how reliable or ambiguous the model’s prediction is.
 
-### 🔹 **Prototype / Similarity Explanation**
+### Prototype or Similarity Explanation
 
-Human-intuitive reasoning:
+Provides human-understandable justification by comparing the decision to similar historical cases.
 
-> “This case resembles previous instances”
+### Governance Decision
 
----
+A final risk-aware decision policy indicating whether the output can be automated, reviewed, or escalated.
 
-### 🔹 **Governance Decision**
 
-Risk-aware automation policy:
 
-✔ Auto-Accept
-✔ Warn / Review
-✔ Escalate to Human
-
----
-
-# 🧩 **Project Structure**
-
-Hackathon-optimized modular architecture:
+## Project Structure
 
 ```
 advanced_edis_project/
 │
-├── app.py                          # Streamlit Dashboard (Entry Point)
-│
-├── core/                           # Prediction & Model Logic
+├── app.py
+├── core/
 │   ├── prediction_engine.py
 │   ├── model_registry.py
 │   └── ensemble_manager.py
@@ -217,7 +154,7 @@ advanced_edis_project/
 │   ├── fairness_engine.py
 │   └── causal_engine.py
 │
-├── governance/                     # Governance & Risk Policies ⭐
+├── governance/
 │   ├── risk_scoring.py
 │   ├── decision_policy.py
 │   └── escalation_manager.py
@@ -241,93 +178,36 @@ advanced_edis_project/
 
 ---
 
-# 🖥️ **User Interface**
+## Technology Stack
 
-The dashboard enables:
-
-✔ Model selection
-✔ Input / dataset upload
-✔ Prediction visualization
-✔ Advanced interpretation panel
-✔ Stability & confidence indicators
-✔ Governance signals
-
----
-
-# ⚙️ **Technology Stack**
-
-**Language:** Python
-**UI Layer:** Streamlit
-**ML Frameworks:** Scikit-learn / XGBoost / PyTorch
+* Programming Language: Python
+* UI Layer: GradioUI
+* ML Frameworks: Scikit-learn, XGBoost, PyTorch
 
 Decision Intelligence Components:
 
-* Counterfactuals → DiCE / custom logic
-* Robustness → Perturbation analysis
-* Uncertainty → Confidence / entropy metrics
-* Similarity → Nearest neighbor reasoning
-* Fairness → Bias & disparity metrics
+* Counterfactuals: DiCE / custom logic
+* Robustness: Perturbation and sensitivity analysis
+* Uncertainty: Confidence and entropy-based metrics
+* Similarity: Nearest-neighbor reasoning
+* Fairness: Bias and disparity metrics
 
----
+**Target Use Cases**
 
-# 🎯 **Target Use Cases**
-
-INTERPRETX is designed for **high-risk AI decisions**:
-
-* Credit approval & risk scoring
-* Medical decision support
-* Hiring & screening systems
+* Credit approval and financial risk scoring
+* Medical decision support systems
+* Hiring and candidate screening
 * Fraud detection
-* Policy & compliance tools
+* Policy evaluation and compliance tools
 
----
 
-# ✅ **Why INTERPRETX is Different**
+## Governance and Safety Concept
 
-Unlike traditional XAI dashboards:
-
-✔ Focuses on **decision reliability & governance**
-✔ Provides **actionable explanations**
-✔ Evaluates **risk & trustworthiness**
-✔ Enables **human-supervised AI deployment**
-
----
-
-# 🛡️ **Governance & Safety Concept**
-
-Each decision is evaluated using:
+Each decision is evaluated across:
 
 * Stability
 * Uncertainty
 * Fairness risk
 * Counterfactual sensitivity
 
-Which determines safe automation behavior.
-
----
-
-# 🚀 **Future Extensions**
-
-Designed for easy migration to:
-
-<<<<<<< HEAD
-✔ FastAPI / Flask backend
-✔ React / Angular frontend
-✔ API Gateway / Microservices
-✔ PostgreSQL / MongoDB storage
-✔ Drift monitoring services
-
----
-
-# 👥 **Hackathon Note**
-
-For hackathon efficiency, INTERPRETX runs as a **unified Streamlit + Python system**, while maintaining modular architecture for future scaling.
-
----
-=======
-* FastAPI or Flask backends
-* React or Angular frontends
-* API gateways and microservices
-* PostgreSQL and MongoDB storage
-* Continuous drift and monitoring services
->>>>>>> 2a54f3412f88d9f676301a87f28eae060ba70e6f
+These signals collectively determine whether automated action is permitted or human review is required.
