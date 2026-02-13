@@ -1,0 +1,15 @@
+streamlit
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+dice-ml
+alibi
+scipy
+faiss-cpu
+fairlearn
+matplotlib
+plotly
+seaborn
+gradio
